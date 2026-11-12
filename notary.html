@@ -74,6 +74,9 @@
         </span>
       </div>
       <div class="flex flex-wrap items-center gap-2">
+        <button onclick="openModal('pricingModal')" class="px-3 py-1 rounded bg-white/15 hover:bg-white/25 text-seal-400 font-semibold transition">
+          Good / Better / Best Pricing
+        </button>
         <button onclick="openModal('glbaModal')" class="px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 text-slate-200 transition">
           GLBA &amp; Legal Docs
         </button>
@@ -607,6 +610,106 @@
 
     </div>
   </footer>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL: GOOD / BETTER / BEST END OF YEAR SALE PRICING                   -->
+  <!-- ===================================================================== -->
+  <div id="pricingModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white text-oxford-950 rounded-3xl max-w-5xl w-full p-6 sm:p-8 shadow-2xl my-8">
+      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4 mb-6">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 text-white text-xs font-bold uppercase tracking-wider mb-1">
+            🔥 Limited-Time End of Year Sale Pricing
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-bold">Website &amp; Marketing Plans for Stella Villegas — New Foundation Realty, LLC</h3>
+        </div>
+        <button onclick="closeModal('pricingModal')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 font-bold text-sm">✕ Close</button>
+      </div>
+
+      <div class="mb-6 p-4 rounded-2xl bg-oxford-950 text-white flex flex-wrap items-center justify-between gap-4 border border-tealbrand-500/40">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-tealbrand-400">✒️ Second Business Website Add-On (Independent Mobile Notary Site)</div>
+          <div class="text-sm text-slate-200 mt-0.5">
+            Add this complete standalone <strong>Stella Villegas Mobile Notary &amp; Loan Signing Site</strong> connected via top menu tab:
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="text-xs line-through text-slate-400 mr-1.5">Standard: +$250</span>
+          <span class="px-3 py-1 rounded-lg bg-tealbrand-500 text-oxford-950 font-bold text-sm">End of Year Sale: +$100 One-Time!</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 text-xs">
+        <div class="rounded-2xl border border-slate-200 p-6 flex flex-col justify-between">
+          <div>
+            <div class="font-bold uppercase text-slate-500">Option 1 • Good</div>
+            <div class="font-serif text-2xl font-bold mt-1">Foundation Starter</div>
+            <div class="mt-3 mb-4 p-3 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="text-[11px] text-slate-500">Standard Setup: <span class="line-through font-semibold">$699</span></div>
+              <div class="text-3xl font-bold text-oxford-950 mt-0.5">$497 <span class="text-xs font-semibold text-red-600 uppercase">Sale</span></div>
+              <div class="text-xs font-semibold text-slate-700 mt-1">+ $29/mo Basic Hosting</div>
+              <div class="mt-2 pt-2 border-t border-slate-200 text-[11px] text-tealbrand-700 font-bold">
+                + Add 2nd Business Site (Notary): +$100 <span class="line-through text-slate-400 font-normal">($250)</span> → $597 Total Setup
+              </div>
+            </div>
+            <ul class="space-y-2 text-slate-700">
+              <li>✓ Custom Website with Texas TREC &amp; Notary Compliance</li>
+              <li>✓ Mobile-Responsive Design &amp; Direct Contact Form</li>
+              <li class="text-slate-400">✕ No ongoing content updates included</li>
+              <li class="text-slate-400">✕ No SMS lead text alerts or Google Business setup</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border-2 border-tealbrand-600 bg-tealbrand-50/40 p-6 shadow-lg flex flex-col justify-between relative">
+          <span class="absolute -top-3 left-6 px-3 py-0.5 rounded-full teal-gradient text-white font-bold text-[10px] uppercase tracking-wider">
+            ★ Most Popular • Best Value
+          </span>
+          <div>
+            <div class="font-bold uppercase text-tealbrand-700">Option 2 • Better</div>
+            <div class="font-serif text-2xl font-bold mt-1">Growth Website &amp; Support</div>
+            <div class="mt-3 mb-4 p-3 rounded-xl bg-white border border-tealbrand-500/40">
+              <div class="text-[11px] text-slate-500">Standard Setup: <span class="line-through font-semibold">$899</span></div>
+              <div class="text-3xl font-bold text-oxford-950 mt-0.5">$697 <span class="text-xs font-semibold text-red-600 uppercase">Sale</span></div>
+              <div class="text-xs font-bold text-oxford-900 mt-1">+ $97/mo Hosting, CRM &amp; Support</div>
+              <div class="mt-2 pt-2 border-t border-slate-200 text-[11px] text-tealbrand-700 font-bold">
+                + Add 2nd Business Site (Notary): +$100 <span class="line-through text-slate-400 font-normal">($250)</span> → $797 Total Setup
+              </div>
+            </div>
+            <ul class="space-y-2 text-slate-800 font-medium">
+              <li>✓ <strong>Full Interactive Website + Lead Capture System</strong></li>
+              <li>✓ <strong>Instant SMS Text Alerts + Missed-Call Text-Back</strong></li>
+              <li>✓ <strong>Google Business Profile Setup &amp; Optimization</strong></li>
+              <li>✓ <strong>Ongoing Website Updates Included</strong></li>
+              <li>✓ <strong>Full Texas TREC &amp; Statutory Notary Compliance</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-oxford-950 text-white p-6 flex flex-col justify-between">
+          <div>
+            <div class="font-bold uppercase text-seal-400">Option 3 • Best</div>
+            <div class="font-serif text-2xl font-bold mt-1">Website + Social Media Partner</div>
+            <div class="mt-3 mb-4 p-3 rounded-xl bg-white/10 border border-white/15">
+              <div class="text-[11px] text-slate-300">Standard Setup: <span class="line-through font-semibold">$997</span></div>
+              <div class="text-3xl font-bold text-seal-400 mt-0.5">$897 <span class="text-xs font-semibold text-tealbrand-400 uppercase">Sale</span></div>
+              <div class="text-xs font-bold text-slate-200 mt-1">+ $247/mo Web Support + Social Media</div>
+              <div class="mt-2 pt-2 border-t border-white/15 text-[11px] text-tealbrand-400 font-bold">
+                + Add 2nd Business Site (Notary): +$100 <span class="line-through text-slate-400 font-normal">($250)</span> → $997 Total Setup
+              </div>
+            </div>
+            <ul class="space-y-2 text-slate-200">
+              <li>✓ <strong>Everything in the "Better" Plan</strong></li>
+              <li>✓ <strong>Done-For-You Social Media Support</strong> (8 custom posts/mo on FB, IG &amp; LinkedIn)</li>
+              <li>✓ <strong>Automated 5-Star Google Review Funnel</strong></li>
+              <li>✓ <strong>Unlimited Priority Website Updates</strong></li>
+              <li>✓ <strong>Quarterly 1-on-1 Marketing Strategy Call</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ===================================================================== -->
   <!-- MODAL: GLBA NPI SECURITY, IMPARTIALITY & TX NOTARY SPECIFICATIONS      -->
