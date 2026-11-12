@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Foundation Realty, LLC | Stella Villegas, GRI, SRS & Notary Signing Agent</title>
+  <meta name="description" content="Stella Villegas — North Texas Realtor (GRI, SRS) and Certified Mobile Notary Signing Agent serving Justin, North Richland Hills, Flower Mound, Euless, and the DFW Metroplex." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#0A1628',
+              900: '#10213B',
+              800: '#1B3358',
+              700: '#274675'
+            },
+            gold: {
+              600: '#B58938',
+              500: '#C89D4C',
+              400: '#DAB466',
+              100: '#F9F3E5',
+              50: '#FDFBF6'
+            },
+            sage: {
+              700: '#355E4B',
+              100: '#E8F2EC'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FDFBF6;
+      color: #10213B;
+    }
+    h1, h2, h3, .font-serif-display {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .tab-section {
+      display: none;
+      animation: fadeIn 0.32s ease-out;
+    }
+    .tab-section.active {
+      display: block;
+    }
+    .all-sections-mode .tab-section {
+      display: block !important;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #C89D4C 0%, #B58938 100%);
+    }
+    .hero-pattern {
+      background: radial-gradient(circle at 80% 20%, rgba(200, 157, 76, 0.16), transparent 45%),
+                  linear-gradient(160deg, #0A1628 0%, #10213B 60%, #1B3358 100%);
+    }
+  </style>
+</head>
+<body class="all-sections-mode antialiased selection:bg-gold-500 selection:text-white">
+
+  <!-- JAMES'S LIVE SALES DEMO CONTROL BAR -->
+  <div id="demoBar" class="bg-navy-950 text-white border-b border-gold-500/40 px-4 py-2.5 text-xs sm:text-sm sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gold-500/20 text-gold-400 font-semibold border border-gold-500/30">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          LIVE PROTOTYPE MODEL
+        </span>
+        <span class="text-slate-300 hidden md:inline">Prepared for <strong>Stella Villegas (New Foundation Realty, LLC)</strong> by James ("JMb &lt;&gt;&lt;")</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <button onclick="toggleViewMode()" id="viewModeBtn" class="px-3 py-1 rounded bg-white/10 hover:bg-white/20 text-slate-200 transition font-medium">
+          Mode: Full Scroll (Click for Strict Tab Mode)
+        </button>
+        <button onclick="swapPhoto()" class="px-3 py-1 rounded bg-white/10 hover:bg-white/20 text-slate-200 transition font-medium">
+          Swap Portrait Preview
+        </button>
+        <button onclick="openModal('proposalModal')" class="px-3.5 py-1 rounded gold-gradient text-white font-semibold shadow hover:opacity-95 transition">
+          View Good / Better / Best Pricing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP UTILITY / FAITH & CREDENTIALS RIBBON -->
+  <div class="bg-gold-100/80 border-b border-gold-500/20 text-navy-900 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="text-gold-600">✝</span>
+        <span>Built on Integrity, Faith &amp; Service • <em>"No other foundation than Jesus Christ" (1 Cor 3:11)</em></span>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 font-semibold">
+        <span>📍 Justin • North Richland Hills • Flower Mound • Euless • DFW</span>
+        <a href="tel:2146820346" class="text-navy-900 hover:text-gold-600 underline decoration-gold-500/60">Mobile: (214) 682-0346</a>
+        <a href="tel:9724093229" class="hidden sm:inline text-navy-900 hover:text-gold-600">Office: (972) 409-3229</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="bg-white/95 backdrop-blur-md sticky top-[45px] z-40 border-b border-slate-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#home" onclick="navigateTab('home')" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-navy-900 text-gold-400 flex flex-col items-center justify-center font-serif font-bold text-xl border border-gold-500/40 shadow-sm group-hover:bg-navy-800 transition">
+          <span>NF</span>
+        </div>
+        <div>
+          <span class="block font-serif text-2xl sm:text-3xl font-bold tracking-tight text-navy-950 leading-none">
+            New Foundation Realty
+          </span>
+          <span class="block text-[11px] uppercase tracking-widest text-gold-600 font-semibold mt-1">
+            Stella Villegas • Realtor® GRI, SRS &amp; Notary Signing Agent
+          </span>
+        </div>
+      </a>
+
+      <!-- 5 Core Navigation Tabs Requested -->
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+        <button onclick="navigateTab('home')" data-tab="home" class="nav-tab px-4 py-2 rounded-lg text-sm font-semibold text-navy-900 hover:bg-gold-100/60 transition">
+          Home
+        </button>
+        <button onclick="navigateTab('about')" data-tab="about" class="nav-tab px-4 py-2 rounded-lg text-sm font-semibold text-navy-900 hover:bg-gold-100/60 transition">
+          About Stella
+        </button>
+        <button onclick="navigateTab('buysell')" data-tab="buysell" class="nav-tab px-4 py-2 rounded-lg text-sm font-semibold text-navy-900 hover:bg-gold-100/60 transition">
+          Buy / Sell
+        </button>
+        <button onclick="navigateTab('notary')" data-tab="notary" class="nav-tab px-4 py-2 rounded-lg text-sm font-bold text-navy-950 bg-gold-100 border border-gold-500/40 hover:bg-gold-400/30 transition flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          Notary Signing Agent
+        </button>
+        <button onclick="navigateTab('contact')" data-tab="contact" class="nav-tab px-4 py-2 rounded-lg text-sm font-semibold text-navy-900 hover:bg-gold-100/60 transition">
+          Contact
+        </button>
+      </nav>
+
+      <!-- Direct Action CTA -->
+      <div class="hidden sm:flex items-center gap-3">
+        <button onclick="navigateTab('contact')" class="px-5 py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-semibold text-sm shadow-sm transition">
+          Talk with Stella
+        </button>
+      </div>
+
+      <!-- Mobile Menu Trigger -->
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="lg:hidden p-2 rounded-lg text-navy-900 hover:bg-slate-100">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-2 pb-4 space-y-1">
+      <button onclick="navigateTab('home'); document.getElementById('mobileMenu').classList.add('hidden')" class="block w-full text-left px-3 py-2 rounded-lg font-semibold text-navy-900 hover:bg-gold-100/60">Home</button>
+      <button onclick="navigateTab('about'); document.getElementById('mobileMenu').classList.add('hidden')" class="block w-full text-left px-3 py-2 rounded-lg font-semibold text-navy-900 hover:bg-gold-100/60">About Stella</button>
+      <button onclick="navigateTab('buysell'); document.getElementById('mobileMenu').classList.add('hidden')" class="block w-full text-left px-3 py-2 rounded-lg font-semibold text-navy-900 hover:bg-gold-100/60">Buy / Sell</button>
+      <button onclick="navigateTab('notary'); document.getElementById('mobileMenu').classList.add('hidden')" class="block w-full text-left px-3 py-2 rounded-lg font-bold text-gold-600 bg-gold-50">✦ Notary Signing Agent</button>
+      <button onclick="navigateTab('contact'); document.getElementById('mobileMenu').classList.add('hidden')" class="block w-full text-left px-3 py-2 rounded-lg font-semibold text-navy-900 hover:bg-gold-100/60">Contact</button>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- TAB 1: HOME (DUAL-PATH HERO + CREDENTIALS OVERVIEW)                    -->
+  <!-- ===================================================================== -->
+  <section id="tab-home" class="tab-section active">
+    <div class="hero-pattern text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Message & Dual Paths -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-gold-400/30 text-gold-400 text-xs font-semibold tracking-wide uppercase">
+              <span>North Texas Realtor® (GRI, SRS)</span>
+              <span>•</span>
+              <span>Certified Notary Signing Agent</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight">
+              A Firm Foundation for Every <span class="text-gold-400 italic font-normal">Home</span> &amp; Every <span class="text-gold-400 italic font-normal">Signature.</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-2xl">
+              Not another impersonal property-search portal. Whether you are buying or selling a family home across North Texas—or need an experienced, Snapdocs-verified <strong>Mobile Notary Signing Agent</strong> at your table—you work directly with <strong>Stella Villegas</strong>.
+            </p>
+
+            <!-- THE 2 CLEAR PATHS: BUYING/SELLING VS NEED A NOTARY -->
+            <div class="grid sm:grid-cols-2 gap-4 pt-3">
+              <!-- Path 1: Buying or Selling -->
+              <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 hover:border-gold-400 transition group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Path 01 • Real Estate</span>
+                  <span class="text-xs px-2 py-0.5 rounded bg-white/10 text-white">GRI &amp; SRS</span>
+                </div>
+                <h2 class="text-2xl font-bold text-white mb-1.5">Buying or Selling?</h2>
+                <p class="text-sm text-slate-300 mb-4">
+                  Personal guidance in Justin, North Richland Hills, Flower Mound, Euless &amp; greater DFW.
+                </p>
+                <button onclick="navigateTab('buysell')" class="w-full py-2.5 px-4 rounded-xl gold-gradient text-white font-semibold text-sm shadow flex items-center justify-center gap-2 group-hover:opacity-95 transition">
+                  <span>Explore Buy / Sell Plan</span>
+                  <span>→</span>
+                </button>
+              </div>
+
+              <!-- Path 2: Need a Notary Signing Agent -->
+              <div class="bg-navy-950/80 backdrop-blur-md border-2 border-gold-500/70 rounded-2xl p-5 hover:border-gold-400 transition group relative">
+                <span class="absolute -top-2.5 right-4 px-2.5 py-0.5 rounded-full bg-gold-500 text-navy-950 font-bold text-[10px] uppercase tracking-wider shadow">
+                  Mobile DFW Funnel
+                </span>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Path 02 • Mobile Signings</span>
+                  <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Snapdocs Verified</span>
+                </div>
+                <h2 class="text-2xl font-bold text-white mb-1.5">Need a Notary?</h2>
+                <p class="text-sm text-slate-300 mb-4">
+                  Loan signings for Title/Escrow offices &amp; mobile general notary work with printing/scanbacks.
+                </p>
+                <button onclick="navigateTab('notary')" class="w-full py-2.5 px-4 rounded-xl bg-white text-navy-950 hover:bg-gold-100 font-bold text-sm shadow flex items-center justify-center gap-2 transition">
+                  <span>Book Notary Signing Agent</span>
+                  <span>→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Trust Metrics Bar -->
+            <div class="pt-4 grid grid-cols-3 gap-4 border-t border-white/15 text-left">
+              <div>
+                <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">GRI &amp; SRS</div>
+                <div class="text-xs text-slate-300">Advanced Realtor® Designations</div>
+              </div>
+              <div>
+                <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">Mobile DFW</div>
+                <div class="text-xs text-slate-300">Dual-Tray Print &amp; Scanbacks</div>
+              </div>
+              <div>
+                <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">1-on-1 Care</div>
+                <div class="text-xs text-slate-300">Inquiries Come Straight to Stella</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Stella Portrait Card -->
+          <div class="lg:col-span-5">
+            <div class="relative mx-auto max-w-md">
+              <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-gold-500/40 to-transparent blur-xl"></div>
+              <div class="relative bg-white text-navy-950 rounded-3xl p-4 shadow-2xl border border-gold-500/30">
+                <div class="relative rounded-2xl overflow-hidden aspect-[4/4.6] bg-slate-200">
+                  <img id="stellaPortrait" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85" alt="Stella Villegas - Realtor GRI, SRS and Certified Notary Signing Agent" class="w-full h-full object-cover object-top transition duration-500" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 right-4 text-white">
+                    <span class="inline-block px-2.5 py-0.5 rounded bg-gold-500 text-navy-950 font-bold text-[11px] uppercase tracking-wider mb-1">
+                      Grateful Believer • Servant Leader
+                    </span>
+                    <h3 class="text-3xl font-bold leading-tight">Stella Villegas</h3>
+                    <p class="text-xs text-slate-200">Realtor® GRI, SRS • Certified Notary Signing Agent</p>
+                  </div>
+                </div>
+
+                <div class="p-4 space-y-3">
+                  <blockquote class="text-sm italic text-slate-700 border-l-2 border-gold-500 pl-3">
+                    "Whether I am negotiating top dollar for your family's home or sitting at your kitchen table guiding a loan signing, my promise is honesty, excellence, and peace of mind."
+                  </blockquote>
+                  <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-100 text-xs font-semibold text-navy-800">
+                    <span>📞 (214) 682-0346</span>
+                    <button onclick="navigateTab('contact')" class="text-gold-600 hover:underline">Send Direct Message →</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- TAB 2: ABOUT STELLA (CREDENTIALS, FAITH FOUNDATION & SERVICE AREAS)    -->
+  <!-- ===================================================================== -->
+  <section id="tab-about" class="tab-section py-20 bg-gold-50 border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-100 text-gold-600 text-xs font-bold uppercase tracking-wider">
+            About Stella Villegas
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-bold text-navy-950 leading-tight">
+            Why "New Foundation Realty"? Because Every Move Deserves Solid Ground.
+          </h2>
+          <p class="text-slate-700 leading-relaxed">
+            As a grateful believer in Jesus Christ, my business is built on a simple conviction: <strong>treat every client's family, home, and financial future with the same care and integrity I would want for my own.</strong>
+          </p>
+          <p class="text-slate-700 leading-relaxed">
+            Most real estate websites try to act like miniature Zillows—flooding you with thousands of unfiltered listings while hiding the person you actually trust. I built <strong>New Foundation Realty</strong> differently. Here, you get direct access to a seasoned North Texas professional who understands both the market strategy of buying and selling <em>and</em> the intricate closing table paperwork as a Certified Notary Signing Agent.
+          </p>
+
+          <!-- Designation Pillars -->
+          <div class="grid sm:grid-cols-3 gap-4 pt-2">
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+              <div class="text-gold-600 font-serif font-bold text-2xl mb-1">GRI</div>
+              <div class="text-xs font-bold text-navy-950 uppercase mb-1">Graduate, REALTOR® Institute</div>
+              <p class="text-xs text-slate-600">In-depth training in legal, regulatory, and contract standards to protect your transaction.</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+              <div class="text-gold-600 font-serif font-bold text-2xl mb-1">SRS</div>
+              <div class="text-xs font-bold text-navy-950 uppercase mb-1">Seller Representative Specialist</div>
+              <p class="text-xs text-slate-600">Premier credential for pricing, staging, marketing, and negotiating maximum equity for sellers.</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+              <div class="text-gold-600 font-serif font-bold text-2xl mb-1">CNSA</div>
+              <div class="text-xs font-bold text-navy-950 uppercase mb-1">Certified Notary Signing Agent</div>
+              <p class="text-xs text-slate-600">Snapdocs-verified mobile loan signing specialist trusted by title companies &amp; families.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: North Texas Service Footprint & Client Love -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="bg-navy-900 text-white rounded-3xl p-8 shadow-xl relative overflow-hidden">
+            <h3 class="text-2xl sm:text-3xl font-bold text-gold-400 mb-3">Communities Served Across North Texas</h3>
+            <p class="text-sm text-slate-300 mb-6">
+              Based in <strong>Justin, TX (76247)</strong> and traveling daily across Denton, Tarrant, and Dallas counties for real estate consultations and mobile notary signings:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm font-medium">
+              <div class="bg-white/10 rounded-xl px-3.5 py-2.5 flex items-center gap-2">
+                <span class="text-gold-400">●</span> Justin, TX
+              </div>
+              <div class="bg-white/10 rounded-xl px-3.5 py-2.5 flex items-center gap-2">
+                <span class="text-gold-400">●</span> North Richland Hills
+              </div>
+              <div class="bg-white/10 rounded-xl px-3.5 py-2.5 flex items-center gap-2">
+                <span class="text-gold-400">●</span> Flower Mound
+              </div>
+              <div class="bg-white/10 rounded-xl px-3.5 py-2.5 flex items-center gap-2">
+                <span class="text-gold-400">●</span> Euless &amp; Bedford
+              </div>
+              <div class="bg-white/10 rounded-xl px-3.5 py-2.5 flex items-center gap-2">
+                <span class="text-gold-400">●</span> Trophy Club / Roanoke
+              </div>
+              <div class="bg-white/10 rounded-xl px-3.5 py-2.5 flex items-center gap-2">
+                <span class="text-gold-400">●</span> Irving &amp; Greater DFW
+              </div>
+            </div>
+
+            <!-- Client Testimonial Box -->
+            <div class="mt-8 bg-white/10 border border-gold-400/30 rounded-2xl p-5">
+              <div class="flex items-center gap-1 text-gold-400 text-sm mb-2">★★★★★</div>
+              <p class="text-sm text-slate-100 italic mb-3">
+                "Stella walked us through every step of our sale with patience, prayerful peace, and total professionalism. Because she is also a Certified Signing Agent, she explained closing documents that usually feel overwhelming. We always felt protected!"
+              </p>
+              <div class="text-xs font-bold text-gold-400 uppercase tracking-wider">
+                — DFW Home Seller &amp; Closing Client (Representative Testimonial Layout)
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- TAB 3: BUY / SELL (SOLD STORIES + PERSONALIZED INTAKE FUNNEL)          -->
+  <!-- ===================================================================== -->
+  <section id="tab-buysell" class="tab-section py-20 bg-white border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-gold-100 text-gold-600 text-xs font-bold uppercase tracking-wider mb-3">
+          Buy &amp; Sell With Confidence
+        </span>
+        <h2 class="text-4xl sm:text-5xl font-bold text-navy-950 mb-4">
+          Real Stories &amp; Proven Results Across DFW
+        </h2>
+        <p class="text-slate-600">
+          Every home sale or purchase has a family story behind it. Instead of leaving you to scroll endlessly on listing sites, Stella crafts a personalized strategy for your timeline, neighborhood, and budget.
+        </p>
+      </div>
+
+      <!-- Sold & Featured Market Stories -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <!-- Story 1: Euless Sale -->
+        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition bg-gold-50/40 flex flex-col">
+          <div class="relative h-52 bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Euless TX Sold Home" class="w-full h-full object-cover" />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-bold uppercase shadow">
+              ✓ Documented 2024 Sale • Euless, TX
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold text-navy-950 mb-2">Mid-Cities Transition in Euless</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Guided from initial preparation to closing table with SRS pricing strategy, proactive inspection coordination, and seamless contract-to-close execution.
+              </p>
+            </div>
+            <button onclick="prefillInquiry('Selling a home like the Euless success story')" class="text-sm font-bold text-gold-600 hover:text-navy-900 flex items-center gap-1">
+              <span>Ask Stella How We Did It</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Story 2: North Richland Hills -->
+        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition bg-gold-50/40 flex flex-col">
+          <div class="relative h-52 bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="North Richland Hills Home" class="w-full h-full object-cover" />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy-900 text-gold-400 text-xs font-bold uppercase shadow">
+              North Richland Hills Focus
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold text-navy-950 mb-2">North Richland Hills Family Moves</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Helping Tarrant County homeowners evaluate true neighborhood comps, time their move with school and work calendars, and avoid costly contract pitfalls.
+              </p>
+            </div>
+            <button onclick="prefillInquiry('North Richland Hills Home Valuation / Buying')" class="text-sm font-bold text-gold-600 hover:text-navy-900 flex items-center gap-1">
+              <span>Request NRH Market Report</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Story 3: Flower Mound & Justin -->
+        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition bg-gold-50/40 flex flex-col">
+          <div class="relative h-52 bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Flower Mound & Justin TX Real Estate" class="w-full h-full object-cover" />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navy-900 text-gold-400 text-xs font-bold uppercase shadow">
+              Flower Mound &amp; Justin, TX
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold text-navy-950 mb-2">Denton County Growth Corridor</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                From established neighborhoods in Flower Mound to new-build and acreage opportunities around Justin, get local representation that protects your bottom line.
+              </p>
+            </div>
+            <button onclick="prefillInquiry('Flower Mound / Justin Real Estate Consultation')" class="text-sm font-bold text-gold-600 hover:text-navy-900 flex items-center gap-1">
+              <span>Plan Your Denton County Move</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Buyer vs Seller Strategy Selector -->
+      <div class="bg-navy-950 text-white rounded-3xl p-8 lg:p-12 shadow-xl">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Direct to Stella • No Call Centers</span>
+            <h3 class="text-3xl sm:text-4xl font-bold">Thinking About Buying or Selling in the Next 3–12 Months?</h3>
+            <p class="text-slate-300 text-sm sm:text-base">
+              Get a custom <strong>Home Equity &amp; Net Sheet Valuation</strong> (for Sellers) or a <strong>Curated Off-Market &amp; MLS Home List</strong> (for Buyers) prepared personally by Stella Villegas.
+            </p>
+          </div>
+          <div class="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3">
+            <button onclick="prefillInquiry('I am thinking of SELLING my home and want a custom net sheet')" class="w-full py-3.5 px-6 rounded-xl gold-gradient text-white font-bold text-sm shadow hover:opacity-95 transition">
+              Request My Home's Current Value &amp; Seller Net Sheet →
+            </button>
+            <button onclick="prefillInquiry('I am looking to BUY a home in North Texas')" class="w-full py-3.5 px-6 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm transition">
+              Schedule a 15-Minute Buyer Gameplan Call →
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- TAB 4: NOTARY SIGNING AGENT (THE UNIQUE LEAD FUNNEL)                   -->
+  <!-- ===================================================================== -->
+  <section id="tab-notary" class="tab-section py-20 bg-gradient-to-b from-gold-100/70 via-gold-50 to-white border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Funnel Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy-900 text-gold-400 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
+          <span>✦ Certified Notary Signing Agent &amp; Mobile Texas Notary Public</span>
+        </div>
+        <h2 class="text-4xl sm:text-5xl font-bold text-navy-950 mb-4">
+          Precision Loan Signings &amp; Mobile Notary Services Across DFW
+        </h2>
+        <p class="text-slate-700 text-base sm:text-lg">
+          Backed by active real estate brokerage experience and a verified <strong>Snapdocs</strong> signing profile. Whether you are a <strong>Title Company / Escrow Officer</strong> needing an error-free closing or a <strong>local family</strong> needing mobile notarization at home, hospital, or office—Stella brings the closing table to you.
+        </p>
+      </div>
+
+      <!-- Two-Track Notary Audience Cards -->
+      <div class="grid lg:grid-cols-2 gap-8 mb-14">
+        
+        <!-- Track 1: For Title Companies, Lenders & Signing Services -->
+        <div class="bg-navy-950 text-white rounded-3xl p-8 shadow-xl border border-gold-500/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 text-xs font-bold uppercase tracking-wider border border-gold-500/30">
+                For Title Companies, Escrow &amp; Lenders
+              </span>
+              <span class="text-xs text-emerald-400 font-semibold">✓ Snapdocs Verified</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-3">Certified Loan Signing Agent You Can Trust at the Table</h3>
+            <p class="text-slate-300 text-sm mb-6">
+              As a licensed Texas real estate professional (GRI, SRS), Stella understands closing documents inside and out—ensuring borrowers feel calm while every signature, initial, date, and notarization is completed accurately the first time.
+            </p>
+            <ul class="space-y-3 text-sm text-slate-200 mb-8">
+              <li class="flex items-start gap-2.5">
+                <span class="text-gold-400 font-bold">✓</span>
+                <span><strong>Full Mobile Office Equipment:</strong> Dual-tray laser printing (Letter &amp; Legal) + high-speed mobile scanbacks from the table.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-gold-400 font-bold">✓</span>
+                <span><strong>All Real Estate Packages:</strong> Buyer/Seller Packages, Refinances, HELOCs, Reverse Mortgages, Commercial, Texas Cash-Out (50(a)(6) via Title Office), &amp; Loan Mods.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-gold-400 font-bold">✓</span>
+                <span><strong>On-Time FedEx / UPS Drop Guarantee:</strong> Same-day return shipping so funding is never delayed.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-4 border-t border-white/15">
+            <button onclick="selectNotaryType('Title / Escrow Loan Signing')" class="flex-1 py-3 px-5 rounded-xl gold-gradient text-white font-bold text-sm shadow text-center">
+              Book a Loan Signing Below ↓
+            </button>
+            <a href="tel:2146820346" class="py-3 px-5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm text-center">
+              Direct Dispatch: (214) 682-0346
+            </a>
+          </div>
+        </div>
+
+        <!-- Track 2: For Families, Individuals, Seniors & Businesses -->
+        <div class="bg-white text-navy-950 rounded-3xl p-8 shadow-xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-gold-100 text-gold-600 text-xs font-bold uppercase tracking-wider">
+                For Families, Seniors &amp; Local Businesses
+              </span>
+              <span class="text-xs text-navy-800 font-semibold">✓ We Travel to You</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-3">Compassionate Mobile General Notary Services</h3>
+            <p class="text-slate-600 text-sm mb-6">
+              Need documents notarized without fighting DFW traffic? Stella travels directly to your home, office, senior living community, hospital, or coffee shop across Justin, North Richland Hills, Flower Mound, Euless, and surrounding areas.
+            </p>
+            <ul class="space-y-3 text-sm text-slate-700 mb-8">
+              <li class="flex items-start gap-2.5">
+                <span class="text-gold-600 font-bold">✓</span>
+                <span><strong>Estate &amp; Family Documents:</strong> Power of Attorney (POA), Living Trusts, Wills, Medical Directives, &amp; Guardianship Affidavits.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-gold-600 font-bold">✓</span>
+                <span><strong>Property &amp; Business Documents:</strong> Out-of-State Real Estate Closings, Warranty/Quitclaim Deeds, Affidavits, &amp; Vehicle Title Transfers.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-gold-600 font-bold">✓</span>
+                <span><strong>Patient, Respectful Service:</strong> Especially experienced in working gently with seniors and families navigating major life transitions.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-4 border-t border-slate-100">
+            <button onclick="selectNotaryType('Mobile General Notary (POA / Estate / Deed)')" class="flex-1 py-3 px-5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm shadow text-center">
+              Request Mobile Notary Appointment ↓
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- INTERACTIVE NOTARY BOOKING & DISPATCH REQUEST FUNNEL -->
+      <div id="notaryBookingBox" class="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border-2 border-gold-500/50">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-200">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-gold-600">Instant Dispatch &amp; Appointment Funnel</span>
+              <h3 class="text-3xl font-bold text-navy-950">Check Mobile Notary Availability &amp; Request Signing</h3>
+            </div>
+            <div class="text-xs bg-emerald-50 text-emerald-800 border border-emerald-200 px-3.5 py-2 rounded-xl font-semibold">
+              ⚡ Fast Response • Sends Text Alert Straight to Stella
+            </div>
+          </div>
+
+          <form onsubmit="handleNotarySubmit(event)" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div>
+              <label class="block text-xs font-bold uppercase text-navy-900 mb-1.5">1. Signing Type *</label>
+              <select id="notaryTypeSelect" required class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-gold-500 focus:outline-none">
+                <option value="Title / Escrow Loan Signing">Title / Escrow Loan Signing</option>
+                <option value="Seller / Buyer Closing Package">Seller / Buyer Closing Package</option>
+                <option value="Mobile General Notary (POA / Estate / Deed)">Mobile General Notary (POA / Trust / Deed)</option>
+                <option value="Hospital / Senior Living Mobile Signing">Hospital / Senior Living Mobile Signing</option>
+                <option value="Other Notary Request">Other Notary Request</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase text-navy-900 mb-1.5">2. Signing Location / City *</label>
+              <select id="notaryCitySelect" required class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-gold-500 focus:outline-none">
+                <option value="Justin, TX (Base - 76247)">Justin, TX (Base - 76247)</option>
+                <option value="North Richland Hills, TX">North Richland Hills, TX</option>
+                <option value="Flower Mound, TX">Flower Mound, TX</option>
+                <option value="Euless / Bedford / HEB">Euless / Bedford / HEB</option>
+                <option value="Trophy Club / Roanoke / Keller">Trophy Club / Roanoke / Keller</option>
+                <option value="Irving / Las Colinas">Irving / Las Colinas</option>
+                <option value="Other DFW Metroplex Location">Other DFW Metroplex Location</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase text-navy-900 mb-1.5">3. Preferred Date &amp; Time *</label>
+              <input type="text" id="notaryDateInput" placeholder="e.g., Tomorrow at 2:00 PM" required class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-gold-500 focus:outline-none" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase text-navy-900 mb-1.5">Your Name / Title Company *</label>
+              <input type="text" id="notaryNameInput" placeholder="Jane Doe / Heritage Title" required class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-gold-500 focus:outline-none" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase text-navy-900 mb-1.5">Mobile Phone (For SMS Confirmation) *</label>
+              <input type="tel" id="notaryPhoneInput" placeholder="(817) 555-0199" required class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-gold-500 focus:outline-none" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase text-navy-900 mb-1.5">Printing / Scanbacks Needed?</label>
+              <select id="notaryScanSelect" class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm focus:border-gold-500 focus:outline-none">
+                <option value="Dual-Tray Print + Scanbacks Needed">Dual-Tray Print + Scanbacks Needed</option>
+                <option value="Print Package Only (No Scanbacks)">Print Package Only</option>
+                <option value="Signer Already Has Printed Documents">Signer Already Has Documents</option>
+              </select>
+            </div>
+
+            <div class="sm:col-span-2 lg:col-span-3 flex flex-wrap items-center justify-between gap-4 pt-2">
+              <p class="text-xs text-slate-500">
+                <em> Statutory Notice: Stella Villegas is a commissioned Texas Notary Public &amp; Certified Signing Agent, not an attorney licensed to practice law in Texas.</em>
+              </p>
+              <button type="submit" class="px-8 py-3.5 rounded-xl gold-gradient text-white font-bold text-sm shadow-lg hover:opacity-95 transition">
+                Send Signing Request Directly to Stella →
+              </button>
+            </div>
+          </form>
+
+          <div id="notaryConfirmBanner" class="hidden mt-5 p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-sm"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- TAB 5: CONTACT (DIRECT TO STELLA)                                      -->
+  <!-- ===================================================================== -->
+  <section id="tab-contact" class="tab-section py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-gold-100 text-gold-600 text-xs font-bold uppercase tracking-wider">
+            Direct Contact
+          </span>
+          <h2 class="text-4xl font-bold text-navy-950">Let's Talk About Your Home or Signing Needs</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            When you reach out through <strong>New Foundation Realty, LLC</strong>, your inquiry never goes into a corporate lead roulette. It goes straight to Stella's phone.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <a href="tel:2146820346" class="flex items-center gap-4 p-4 rounded-2xl bg-gold-50 border border-gold-500/30 hover:border-gold-500 transition">
+              <div class="w-11 h-11 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center font-bold">📱</div>
+              <div>
+                <div class="text-xs font-bold uppercase text-gold-600">Direct Mobile / Text</div>
+                <div class="text-lg font-bold text-navy-950">(214) 682-0346</div>
+              </div>
+            </a>
+
+            <a href="tel:9724093229" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-gold-500 transition">
+              <div class="w-11 h-11 rounded-xl bg-navy-800 text-white flex items-center justify-center font-bold">☎️</div>
+              <div>
+                <div class="text-xs font-bold uppercase text-slate-500">Office Line</div>
+                <div class="text-lg font-bold text-navy-950">(972) 409-3229</div>
+              </div>
+            </a>
+
+            <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="w-11 h-11 rounded-xl bg-navy-800 text-white flex items-center justify-center font-bold">📍</div>
+              <div>
+                <div class="text-xs font-bold uppercase text-slate-500">Base &amp; Service Territory</div>
+                <div class="text-sm font-bold text-navy-950">Justin, TX 76247 • Serving NRH, Flower Mound, Euless &amp; DFW</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- General Contact / Real Estate Inquiry Form -->
+        <div class="lg:col-span-7">
+          <div class="bg-gold-50/70 rounded-3xl p-8 border border-slate-200 shadow-sm">
+            <h3 class="text-2xl font-bold text-navy-950 mb-2">Send a Message to Stella</h3>
+            <p class="text-xs text-slate-600 mb-6">Ask about buying, selling, home valuations, or mobile notary availability.</p>
+
+            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase text-navy-900 mb-1">Your Name *</label>
+                  <input type="text" required placeholder="First & Last Name" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm focus:border-gold-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase text-navy-900 mb-1">Phone Number *</label>
+                  <input type="tel" required placeholder="(817) 555-0123" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm focus:border-gold-500 focus:outline-none" />
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase text-navy-900 mb-1">Email Address</label>
+                  <input type="email" placeholder="you@example.com" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm focus:border-gold-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase text-navy-900 mb-1">How Can Stella Help You? *</label>
+                  <select id="contactTopicSelect" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm focus:border-gold-500 focus:outline-none">
+                    <option value="Buying or Selling a Home">Buying or Selling a Home</option>
+                    <option value="Mobile Notary / Loan Signing Request">Mobile Notary / Loan Signing Request</option>
+                    <option value="Home Valuation / Seller Net Sheet">Home Valuation / Seller Net Sheet</option>
+                    <option value="General Question">General Question</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase text-navy-900 mb-1">Details or Questions</label>
+                <textarea id="contactMessageInput" rows="4" placeholder="Tell Stella a little about your timeline, neighborhood, or notary needs..." class="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm focus:border-gold-500 focus:outline-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm shadow transition">
+                Send Inquiry Straight to Stella Villegas →
+              </button>
+            </form>
+
+            <div id="contactConfirmBanner" class="hidden mt-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-sm"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- TEXAS TREC COMPLIANT FOOTER                                            -->
+  <!-- ===================================================================== -->
+  <footer class="bg-navy-950 text-slate-300 pt-14 pb-10 border-t border-gold-500/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="font-serif text-2xl font-bold text-white mb-2">New Foundation Realty, LLC</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Stella Villegas, Realtor® (GRI, SRS) &amp; Certified Notary Signing Agent.<br/>
+            Serving Justin, North Richland Hills, Flower Mound, Euless, and the DFW Metroplex.
+          </p>
+        </div>
+
+        <!-- Mandatory Texas TREC Disclosures (At least 10pt font as required by TREC Rule 535.155) -->
+        <div class="space-y-2">
+          <div class="text-xs font-bold uppercase tracking-wider text-gold-400">Texas Real Estate Commission (TREC) Notices</div>
+          <ul class="space-y-1.5 text-sm font-medium">
+            <li>
+              <a href="https://www.trec.texas.gov/forms/information-about-brokerage-services" target="_blank" rel="noopener" class="text-white hover:text-gold-400 underline">
+                Texas Real Estate Commission Information About Brokerage Services (IABS)
+              </a>
+            </li>
+            <li>
+              <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener" class="text-white hover:text-gold-400 underline">
+                Texas Real Estate Commission Consumer Protection Notice
+              </a>
+            </li>
+          </ul>
+          <p class="text-[11px] text-slate-400 pt-1">
+            *Brokerage affiliation display configurable for New Foundation Realty, LLC / Stella Villegas, Broker or Fathom Realty, LLC.
+          </p>
+        </div>
+
+        <div class="text-xs text-slate-400 space-y-2">
+          <div class="font-bold uppercase tracking-wider text-gold-400">Equal Housing &amp; Faith Commitment</div>
+          <p>
+            🏠 Equal Housing Opportunity. Committed to serving every neighbor and family across North Texas with excellence, honesty, and respect.
+          </p>
+          <p class="text-gold-400 font-medium">
+            "In Him" — Built with care by James ("JMb &lt;&gt;&lt;") • (817) 760-0434
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL: GOOD / BETTER / BEST PRICING PROPOSAL DRAWER FOR JAMES'S CALL   -->
+  <!-- ===================================================================== -->
+  <div id="proposalModal" class="hidden fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-5xl w-full p-6 sm:p-8 shadow-2xl border border-gold-500/40 my-8">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-gold-600">Debra McCormick Referral Partner Pricing (25% Believer Discount Applied)</span>
+          <h3 class="text-3xl font-bold text-navy-950">Website &amp; Marketing Options for Sister Stella</h3>
+        </div>
+        <button onclick="closeModal('proposalModal')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm">✕ Close</button>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- GOOD -->
+        <div class="rounded-2xl border border-slate-200 p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold uppercase text-slate-500">Option 1 • Good</span>
+            <h4 class="text-2xl font-bold text-navy-950 mt-1">Foundation Starter</h4>
+            <div class="mt-3 mb-4">
+              <span class="text-xs line-through text-slate-400">$650</span>
+              <span class="text-3xl font-bold text-navy-950">$497</span>
+              <span class="text-xs text-slate-500 block">+ $29/mo basic hosting (no ongoing edits)</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li>✓ 5-Section Website (Home, About, Buy/Sell, Notary Tab, Contact)</li>
+              <li>✓ Texas TREC Compliance Links (IABS &amp; Consumer Notice)</li>
+              <li>✓ Basic Email Contact Form</li>
+              <li class="text-slate-400">✕ No ongoing content updates included</li>
+              <li class="text-slate-400">✕ No SMS text alerts or Google Business setup</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs text-slate-500">
+            Best if you only want a simple static brochure site without ongoing updates.
+          </div>
+        </div>
+
+        <!-- BETTER -->
+        <div class="rounded-2xl border-2 border-gold-500 bg-gold-50/40 p-6 flex flex-col justify-between relative shadow-lg">
+          <span class="absolute -top-3 left-6 px-3 py-0.5 rounded-full gold-gradient text-white font-bold text-[11px] uppercase">
+            ★ Recommended for Stella
+          </span>
+          <div>
+            <span class="text-xs font-bold uppercase text-gold-600">Option 2 • Better</span>
+            <h4 class="text-2xl font-bold text-navy-950 mt-1">Growth Website &amp; Support</h4>
+            <div class="mt-3 mb-4">
+              <span class="text-xs line-through text-slate-400">$950</span>
+              <span class="text-3xl font-bold text-navy-950">$697</span>
+              <span class="text-xs text-navy-800 font-semibold block">+ $97/mo (Hosting, Lead CRM &amp; Monthly Updates)</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-800 font-medium">
+              <li>✓ <strong>This Complete Interactive Website Model</strong></li>
+              <li>✓ <strong>Interactive Notary Signing Agent Booking Funnel</strong></li>
+              <li>✓ <strong>Instant SMS Text Alerts + Missed-Call Text-Back</strong></li>
+              <li>✓ <strong>Google Business Profile Optimization</strong> (Realtor + Mobile Notary)</li>
+              <li>✓ <strong>Ongoing Updates Included</strong> (Add new sold homes &amp; testimonials monthly!)</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gold-500/20 text-xs font-semibold text-navy-900">
+            Flexible Start: Split into 2 easy payments of $350!
+          </div>
+        </div>
+
+        <!-- BEST -->
+        <div class="rounded-2xl border border-slate-200 bg-navy-950 text-white p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold uppercase text-gold-400">Option 3 • Best</span>
+            <h4 class="text-2xl font-bold text-white mt-1">Full Web + Social Media Partner</h4>
+            <div class="mt-3 mb-4">
+              <span class="text-xs line-through text-slate-400">$1,450</span>
+              <span class="text-3xl font-bold text-gold-400">$997</span>
+              <span class="text-xs text-slate-300 block">+ $247/mo (Web Support + Done-For-You Socials)</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-200">
+              <li>✓ <strong>Everything in the "Better" Plan</strong></li>
+              <li>✓ <strong>Done-For-You Social Media Support</strong> (8 custom posts/mo for FB, IG &amp; LinkedIn)</li>
+              <li>✓ <strong>Automated 5-Star Google Review Funnel</strong> after every closing &amp; notary signing</li>
+              <li>✓ <strong>Unlimited Priority Website Updates</strong></li>
+              <li>✓ <strong>Quarterly 1-on-1 Growth Strategy Call</strong></li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/15 text-xs text-gold-400">
+            Complete hands-off digital presence for Real Estate + Mobile Notary.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let strictTabMode = false;
+    const portraits = [
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=900&q=85"
+    ];
+    let portraitIndex = 0;
+
+    function navigateTab(tabName) {
+      if (strictTabMode) {
+        document.querySelectorAll('.tab-section').forEach(sec => sec.classList.remove('active'));
+        const target = document.getElementById('tab-' + tabName);
+        if (target) target.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const target = document.getElementById('tab-' + tabName);
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function toggleViewMode() {
+      strictTabMode = !strictTabMode;
+      const btn = document.getElementById('viewModeBtn');
+      if (strictTabMode) {
+        document.body.classList.remove('all-sections-mode');
+        btn.textContent = 'Mode: Strict 5-Tab View (Click for Full Scroll)';
+      } else {
+        document.body.classList.add('all-sections-mode');
+        btn.textContent = 'Mode: Full Scroll (Click for Strict Tab Mode)';
+      }
+    }
+
+    function swapPhoto() {
+      portraitIndex = (portraitIndex + 1) % portraits.length;
+      document.getElementById('stellaPortrait').src = portraits[portraitIndex];
+    }
+
+    function selectNotaryType(typeVal) {
+      navigateTab('notary');
+      const sel = document.getElementById('notaryTypeSelect');
+      if (sel) sel.value = typeVal;
+      document.getElementById('notaryBookingBox').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function prefillInquiry(topicText) {
+      navigateTab('contact');
+      const msg = document.getElementById('contactMessageInput');
+      if (msg) {
+        msg.value = "Hi Stella, I'd love to talk with you about: " + topicText;
+        msg.focus();
+      }
+    }
+
+    function handleNotarySubmit(e) {
+      e.preventDefault();
+      const type = document.getElementById('notaryTypeSelect').value;
+      const city = document.getElementById('notaryCitySelect').value;
+      const date = document.getElementById('notaryDateInput').value;
+      const name = document.getElementById('notaryNameInput').value;
+      const banner = document.getElementById('notaryConfirmBanner');
+      banner.classList.remove('hidden');
+      banner.innerHTML = `<strong>✓ Demo Lead Captured!</strong> In the live system, Stella immediately receives an SMS text alert: <em>"New Notary Signing Request from ${name} for ${type} in ${city} (${date})."</em>`;
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const banner = document.getElementById('contactConfirmBanner');
+      banner.classList.remove('hidden');
+      banner.innerHTML = `<strong>✓ Demo Inquiry Sent!</strong> In the live GoHighLevel / custom setup, this sends an instant SMS &amp; email notification straight to Stella's phone with automatic missed-call/lead follow-up.`;
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
